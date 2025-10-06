@@ -84,12 +84,21 @@ let temCarteira = true;
 console.log("Pode dirigir? ", (idade >= 18) && temCarteira);
 
 let pix = false;
-let cartao = false;
+let cartao = true;
 
 console.log("Pagar a conta?", pix || cartao);
 
 console.log("Pode dirigir? ", !(idade >= 18) && temCarteira);
 
+//Estruturas de Decisão
+
+
+
+if ((pix === true)||(cartao === true)){
+    console.log("Irá pagar.");
+} else {
+    console.log("Não tem como pagar.");
+}
 
 
 
