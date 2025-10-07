@@ -100,7 +100,71 @@ if ((pix === true)||(cartao === true)){
     console.log("Não tem como pagar.");
 }
 
+const diaSemana = 6;
+let nomeDia;
 
+switch (diaSemana){
+    case 1:
+        nomeDia = "Domingo";
+        break;
+    case 2:
+        nomeDia = "Segunda-feira";
+        break;
+    case 3:
+        nomeDia = "Terça-feira";
+        break;
+    case 4:
+        nomeDia = "Quarta-feira";
+        break;
+    default:
+        nomeDia = "Dia inválido";
+}
+
+if (diaSemana === 1){
+    nomeDia = "Domingo";
+} else if (diaSemana === 2){
+    nomeDia = "Segunda-feira";
+} else if (diaSemana === 3){
+    nomeDia = "Terça-feira";
+} else {
+    nomeDia = "Dia inválido";
+}
+
+console.log("Hoje é:", nomeDia);
+
+//Estrutura de Repetição
+
+
+for (var aux = 0; aux <= 5; aux++){
+    console.log("Valor da variavel auxiliar: ", aux);
+}
+
+let aux2 = 0;
+while (aux2 <= 5){
+    console.log("Valor da segunda variavel auxiliar: ",aux2);
+    aux2++;
+}
+
+aux2 = 0;
+do{
+    console.log("Novo valor da segunda variavel auxiliar: ", aux2);
+    aux2++;
+} while (aux2 <= 5);
+
+for (var aux = 0; aux <= 10; aux++){
+    if (aux === 6){
+        console.log("Valor da variavel auxiliar chegou a 6");
+        break;
+    }
+    console.log("Valor da variavel auxiliar: ", aux);
+}
+
+for (var aux = 1; aux <= 10; aux++){
+    if (aux % 2 !== 0){
+        continue;
+    }
+    console.log("Número par encontrado: ", aux);
+}
 
 
 
