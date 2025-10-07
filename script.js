@@ -57,13 +57,14 @@ console.log("Resto da Divisão: ", total);
 total = x ** y;
 console.log("Exponencial: ", total);
 
+
 //Opderadores de Atribuição
 x += 6;
 
 console.log("O valor de X é: ",x);
 
-//Operadores de Comparação
 
+//Operadores de Comparação
 console.log("Igual a", 5 == "5");
 console.log("Estritamente igual a", 5 === "5");
 
@@ -90,9 +91,8 @@ console.log("Pagar a conta?", pix || cartao);
 
 console.log("Pode dirigir? ", !(idade >= 18) && temCarteira);
 
+
 //Estruturas de Decisão
-
-
 
 if ((pix === true)||(cartao === true)){
     console.log("Irá pagar.");
@@ -132,8 +132,9 @@ if (diaSemana === 1){
 
 console.log("Hoje é:", nomeDia);
 
-//Estrutura de Repetição
 
+
+//Estrutura de Repetição
 
 for (var aux = 0; aux <= 5; aux++){
     console.log("Valor da variavel auxiliar: ", aux);
@@ -166,5 +167,28 @@ for (var aux = 1; aux <= 10; aux++){
     console.log("Número par encontrado: ", aux);
 }
 
+// Funções
 
+function nomeDaFuncao () {
+    console.log("Sou uma função");
+}
+
+nomeDaFuncao();
+
+function soma (valorA, valorB) {
+    console.log("A soma dos dois valores é:", valorA+valorB);
+}
+
+let valorX;
+let valorY;
+
+valorX = 199,3;
+valorY = 120;
+
+soma(valorX, valorY);
+
+valorX = 56;
+valorY = 5000;
+
+soma(valorX, valorY);
 
