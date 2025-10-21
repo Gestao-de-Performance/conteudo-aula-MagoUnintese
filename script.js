@@ -3,7 +3,7 @@ let idade = 23;
 let ads = true;
 let jogos = ["DarkSouls", "League of Legends", "Tales of Phantasia", "Final Fantasy XIV", "Silksong"];
 
-let pessoa = {
+let pessoaUm = {
     nome: "Carlos",
     idade: 23,
     ads: true
@@ -22,7 +22,7 @@ console.log("Cursa ADS?", ads);
 console.log("Jogo favorito: ", jogos[2]);
 nome = "Igo";
 console.log(nome);
-console.log("Lista de nomes: ", pessoa.nome, " e ", pessoaDois.nome);
+console.log("Lista de nomes: ", pessoaUm.nome, " e ", pessoaDois.nome);
 console.log("Jogo do", pessoaDois.nome,":", pessoaDois.jogos[4]);
 
 /*
@@ -191,4 +191,83 @@ valorX = 56;
 valorY = 5000;
 
 soma(valorX, valorY);
+
+function contaBancaria (valor){
+    let saldoInicial = valor;
+
+    function depositar (quantia){
+        saldoInicial += quantia;
+        console.log ("Deposito concluido com sucesso, novo saldo da conta é: ", saldoInicial);
+    }
+
+    function sacar (quantia){
+        saldoInicial -= quantia;
+        console.log ("Saque concluido com sucesso, novo saldo da conta é: ", saldoInicial);
+    }
+
+    return {
+        depositar: depositar,
+        sacar: sacar,
+        verSaldo: () => console.log("O saldo atual é: ", saldoInicial)
+    };
+}
+
+
+
+let minhaConta = contaBancaria(5000);
+
+
+minhaConta.verSaldo();
+
+minhaConta.sacar(4500);
+
+let minhaContaDois = contaBancaria(100);
+
+minhaContaDois.depositar(4500);
+
+
+//Arrow Function
+const somar = (a, b) => a + b;
+console.log("Somar dois valores", somar(199.3, 120));
+
+const subtrair = (a, b) => a - b;
+
+let resultado = somar(50, 25);
+console.log(resultado);
+
+console.log("Valor resultado", subtrair(50, 25));
+
+const par = valor => valor % 2;
+let valorPar = par(23);
+if (valorPar == 0) {
+    console.log("É par");
+} else {
+    console.log("Não é par");
+}
+
+//Arrays
+
+const nota = [7, 6, 6.5, 7.5, 8];
+
+let tamanhoArray = nota.length;
+const totalNota = nota.reduce((somaTotal, valorAtual) => {
+    return somaTotal + valorAtual;
+}, 0);
+
+console.log("Media de notas: ", totalNota / tamanhoArray);
+
+console.log("Tamanho do array é: ", tamanhoArray);
+
+const precos = [9.99, 12, 28, 3.99];
+const precosComDesconto = precos.map(precos => precos * 0.9);
+
+console.log("Preços com desconto: ", precosComDesconto);
+console.log("Preços sem desconto: ", precos);
+
+const notaMaior = nota.filter(nota => nota >= 7);
+console.log("Notas maiores que 7:", notaMaior);
+console.log("Todas as notas:", nota);
+
+
+
 
